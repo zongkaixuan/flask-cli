@@ -8,5 +8,5 @@ class Users(db.Model):
     first_name = db.Column(db.String(50), nullable=False)
     last_name = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(50), nullable=False)
-    creation_date = db.Column(db.Datetime, nullable=False)
-    update_date = db.Column(db.Datetime, nullable=False)
+    creation_date = db.Column(db.DateTime, nullable=False)
+    update_date = db.Column(db.DateTime, nullable=False)

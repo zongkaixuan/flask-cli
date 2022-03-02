@@ -6,7 +6,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class AppConf:
-    pass
+    APP_NAME = 'demo'
 
 
 class DBConf:
@@ -51,3 +51,7 @@ class CeleryConf:
     #         'schedule': crontab(hour=10, minute=15)
     #     },
     # }
+
+
+class Settings(AppConf, DBConf, LogConf, CeleryConf):
+    pass
