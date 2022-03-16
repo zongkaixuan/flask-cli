@@ -1,5 +1,4 @@
 # -*- encoding: utf-8 -*-
-from app.__init__ import create_app
 from app.queue import task_app
 from .base import BaseTask
 
@@ -9,6 +8,5 @@ from .base import BaseTask
     max_retries=2
 )
 def demo_task():
-    app = create_app()
-    with app.app_context():
+    with demo_task.flask_app.app_context():
         pass
